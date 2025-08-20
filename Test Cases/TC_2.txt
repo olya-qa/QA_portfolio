@@ -1,0 +1,37 @@
+TC_2 - Resequence DX codes using 'Resequence' button the “ICD-10 CM Diagnosis” grid
+
+Preconditions: create tested facility
+
+Test steps:
+1) Log in TEC with ProFee license
+2) Settings → Facilities → tested facility→ Configure → Inpatient → uncheck 'Automatically resequence ICD codes' setting
+3) Create  IP encounter for tested facility with AD & DD = 12/01/2020, male, 55 yrs, PS 01, add Dx codes in following order: J18.9, R56.1, R52, Z00.6, A41.89
+4) Click Save
+5) Click Save on the 'Outstanding Edits and Incomplete Operations' popup
+6) Click 'Cancel'
+7) Click 'Save' → 'Save' again → 'No'
+8) Click on 'Resequence' button in the “ICD-10 CM Diagnosis” grid
+9) Click on Save
+10) Drag&drop code A41.89 to the last row
+11) Save → Save
+
+Expected result:
+1) User is logged in
+2) 'Automatically resequence ICD codes' setting is OFF
+3) Codes display in the same order as added
+- GF columns display CC for R56.1 and bold MC for A41.89
+- 'Resequence' button displays next to 'ICD-10 Diagnoses' in the “ICD-10 CM Diagnosis” grid
+4) 'Outstanding Edits and Incomplete Operations' popup displays
+5) Pop up window with message 'Code resequencing is necessary. Would you like to resequence before saving?' appears. Includes 'Cancel', 'No' and 'Yes' buttons
+6) Pop up window closes, no changes in encounter
+7) Encounter saves, codes display in the same order as they were entered
+8) Codes are resequenced in this order J18.9, A41.89(MC bold), R56.1(CC), R52, Z00.6. 'Save' button is enabled. 'Resequence' button doesn't display
+9) Encounter is saved
+10) Code A41.89 is moved to the last row, 'Resequence' button appears
+11) Pop up window with message 'Code resequencing is necessary. Would you like to resequence before saving?' appears. Includes 'Cancel', 'No' and 'Yes' buttons
+
+Test type: functional
+
+Requirement ID: REQ_01
+
+Automation Status: manual

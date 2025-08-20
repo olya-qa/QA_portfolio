@@ -1,4 +1,4 @@
-Summary - Resequence' button when Auto Resequence is ON in IP encounter
+TC_1 - Resequence' button when Auto Resequence setting is ON in IP encounter
 
 Preconditions: create tested facility
 
