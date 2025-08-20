@@ -1,0 +1,15 @@
+{
+  "Bug_id":"1",
+  "Priority":"Hight",
+  "Summary":"System doesn't auto resequences the codes in the Prof CPT/HCPCS grid if preference 'Resequence CPT by Total Facility RVU' is checked",
+  "Steps to reproduce":
+  {
+    "1":"Log in TEC as user with ProFee license",
+    "2":"Settings → Facilities → tested facility → Configure → IP → check ''Resequence CPT by Total Facility RVU' preference",
+    "3":"Create IP encounter for tested facility AD=DD=current date, fill in all required fields, add DX I10, J18.9, K50.00",
+    "4":"Add 5 CPT codes with different 'Total Facility RVU' to Professional CPT/HCPCS grid (e.x. TBD 11950, 34490, 31500, 76705, 93010)",
+    "5":"Observe code order"
+      },
+  "Expected result":"System automatically resequences the codes in the CPT/HCPCS Procedures grid in descending order based on the values in the “Total Facility RVU” column (highest first)",
+  "Actual result":"System does not automatically resequences the codes in the CPT/HCPCS Procedures grid in descending order based on the values in the “Total Facility RVU” column (highest first). "
+}
