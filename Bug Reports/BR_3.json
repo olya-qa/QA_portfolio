@@ -1,0 +1,14 @@
+{
+  "Bug_id":"3",
+  "Priority":"Hight",
+  "Summary":"Unable to open saved patient encounter",
+  "Steps to reproduce":
+  {
+    "1":"Log in App",
+    "2":"Click 'Patient Encounters'",
+    "3":"Check patient encounter and click 'Open''"
+  
+      },
+  "Expected result":"Unable to open",
+  "Actual result":"User is able to open and view encounter "
+}
