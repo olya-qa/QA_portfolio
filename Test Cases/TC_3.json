@@ -1,0 +1,22 @@
+{
+  "TestCase_id":"3",
+  "Title":"Codes do not resequence in IP encounter if 'Resequence CPT by Total Facility RVU' is unchecked",
+  "Steps":
+  {
+    "1":"Log in TEC as user with ProFee license → Settings → Facilities → tested facility → Configure → IP → uncheck ''Resequence CPT by Total Facility RVU' preference",
+    "2":"Create IP encounter for tested facility AD=DD=current date, fill in all required fields, add DX I10, J18.9, K50.00",
+    "3":"Create IP encounter for tested facility AD=DD=current date, fill in all required fields, add DX I10, J18.9, K50.00",
+    "4":"'Manually reorder codes (drag&drop)",
+    "5":"Reload the page",
+        
+  },
+  "Expected result":
+    "1":"'Resequence CPT by Total Facility RVU' preference in unchecked by default ",
+    "2":"Codes are added, no code resequencing, 'Resequence' button displays in the Prof CPT/HCPCS grid",
+    "3":"Codes are reordered, no code resequencing, 'Resequence' button displays in the Prof CPT/HCPCS grid",
+    "4":"Codes are reordered, no code resequencing, 'Resequence' button displays in the Prof CPT/HCPCS grid",
+    "5":"Manual order is retained, no auto resequencing, 'Resequence' button displays in the Prof CPT/HCPCS grid",
+    "6":" "
+}
+
+
