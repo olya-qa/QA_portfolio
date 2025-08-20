@@ -1,0 +1,14 @@
+{
+  "Bug_id":"2",
+  "Priority":"Hight",
+  "Summary":"System fails to add new facility",
+  "Steps to reproduce":
+  {
+    "1":"Log App",
+    "2":"Settings → Facilities → click 'Add New'",
+    "3":"Add ID → select Acute Care → select 010001 → click 'Save'"
+  
+      },
+  "Expected result":"New facility is added to the list",
+  "Actual result":"System  fails to add new facility, Server error 500 "
+}
