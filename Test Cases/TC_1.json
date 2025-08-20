@@ -1,0 +1,23 @@
+{
+  "TestCase_id":"1",
+  "Title":"Resequence' button when Auto Resequence setting is ON in IP encounter",
+  "Steps":
+  {
+    "1":"Log in App",
+    "2":"Settings → Facilities → select tested facility   → check IP setting ‘Automatically resequence ICD codes’",
+    "3":"Create IP encounter, adds DX codes J18.9, R51.0, A41.89 (MC)",
+    "4":"Drag&drop code A41.8 with GF=MC to the last row",
+    "5":"Confirm the action by clicking ‘Ok’"
+    "6":"Click ‘Resequence’ button’"
+  },
+  "Expected result":
+    "1":"User is logged in",
+    "2":"IP setting ‘Automatically resequence ICD codes’  is ON",
+    "3":"Codes autoresequence in the following order J18.9, A41.89(MC), R51.0",
+    "4":"Confirmation window appears ‘Moving this code is in conflict with automatic sequencing. The code may be moved automatically the next time that resequencing is triggered. Would you like to proceed?’",
+    "5":"Code A41.89 (MC) moves to the last row. ‘Resequence’ button appears in the DX grid"
+    "6":"Codes resequence J18.9, A41.89(MC), R51.0"
+}
+
+
+
